@@ -861,6 +861,10 @@
     display: flex;
   }
 
+  .navbar-logo {
+    font-size: 1.8rem;
+  }
+
   .hero-title {
     font-size: clamp(2rem, 8vw, 3rem);
   }
