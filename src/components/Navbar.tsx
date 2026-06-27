@@ -6,6 +6,7 @@ interface NavbarProps {
 
 export default function Navbar({ scrollTo }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function Navbar({ scrollTo }: NavbarProps) {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false); // Close menu on click
     scrollTo(target, { offset: -80 });
   };
 
@@ -28,7 +30,7 @@ export default function Navbar({ scrollTo }: NavbarProps) {
           Regal By Aastha
         </a>
 
-        <div className="navbar-links">
+        <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <a href="#about" onClick={(e) => handleNavClick(e, '#about')}>About</a>
           <a href="#services" onClick={(e) => handleNavClick(e, '#services')}>Services</a>
           <a href="#portfolio" onClick={(e) => handleNavClick(e, '#portfolio')}>Portfolio</a>
@@ -42,7 +44,11 @@ export default function Navbar({ scrollTo }: NavbarProps) {
           </a>
         </div>
 
-        <button className="navbar-mobile-toggle" aria-label="Toggle menu">
+        <button 
+          className={`navbar-mobile-toggle ${isMobileMenuOpen ? 'active' : ''}`} 
+          aria-label="Toggle menu"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
           <span></span>
           <span></span>
           <span></span>

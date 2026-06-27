@@ -855,10 +855,40 @@
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--bg-primary);
+    padding: var(--space-xl) var(--space-md);
+    box-shadow: var(--shadow-md);
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar.scrolled .navbar-links {
+    background: rgba(252, 251, 249, 0.98);
   }
 
   .navbar-mobile-toggle {
     display: flex;
+    z-index: 1001;
+  }
+
+  .navbar-mobile-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .navbar-mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .navbar-logo {
