@@ -138,7 +138,7 @@ export default function Contact() {
                     rows={3}
                   />
                 </div>
-                
+
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '0.5rem' }}>
                   <button
                     type="button"
@@ -150,11 +150,11 @@ export default function Contact() {
                   >
                     Next — Tell Us About Your Event →
                   </button>
-                  
+
                   <div style={{ textAlign: 'center', color: 'rgba(247, 235, 232, 0.6)', fontSize: '0.8rem', margin: '0.25rem 0' }}>
                     — OR —
                   </div>
-                  
+
                   <a
                     href="https://wa.me/9779807022233"
                     className="btn-secondary"
@@ -228,7 +228,7 @@ export default function Contact() {
               <div className="info-icon">📍</div>
               <div>
                 <div className="info-label">Location</div>
-                <div className="info-value">tintoliya, Aqua Park, Biratnagar<br/>Nepal, 977</div>
+                <div className="info-value">tintoliya, Aqua Park, Biratnagar<br />Nepal, 977</div>
               </div>
             </div>
 
@@ -283,7 +283,7 @@ export default function Contact() {
         <div className="footer-bar">
           <p>© 2026 Regal By Aastha. All rights reserved.</p>
           <p>
-            Designed with ✦ by <a href="#">Your Studio</a>
+            Designed with ❤️ by <a href="#">Sonu</a>
           </p>
         </div>
       </div>
